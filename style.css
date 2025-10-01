@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  color: #333;
+  overflow-x: hidden;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+header h1 {
+  font-size: 3rem;
+  animation: fadeDown 1.5s ease;
+}
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fadeUp 2s ease;
+}
+
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
+.card img {
+  width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 1.6rem; color: #ff4f81;
+  text-shadow: 0 0 5px #ff4f81, 0 0 10px #ff80a6, 0 0 20px #ffcce0;
+  animation: glow 2s infinite alternate;
+}
+.card p { margin-top: 10px; font-size: 1rem; color: #666; }
+footer { text-align: center; padding: 30px; font-size: 0.9rem; color: #fff; opacity: 0.8; }
+
+/* Love Falling 💗 */
+.love {
+  position: fixed; top: -10px; font-size: 20px; color: #ff80bf;
+  animation: fall linear forwards; pointer-events: none; opacity: 0.9;
+}
+@keyframes fall { to { transform: translateY(110vh); opacity: 0; } }
+
+@keyframes glow { from { text-shadow: 0 0 5px #ff4f81; } to { text-shadow: 0 0 20px #ffcce0, 0 0 30px #ff80a6; } }
+@keyframes fadeDown { from {opacity: 0; transform: translateY(-40px);} to {opacity: 1; transform: translateY(0);} }
+@keyframes fadeUp { from {opacity: 0; transform: translateY(40px);} to {opacity: 1; transform: translateY(0);} }
+
+/* Tombol Musik */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff4f81;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.3s;
+}
+.music-btn:hover {
+  transform: scale(1.1);
+  background: #ff80a6;
+}
